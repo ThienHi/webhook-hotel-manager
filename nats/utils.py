@@ -47,10 +47,6 @@ async def facebook_publish_to_nats_each_page_id(incoming_message: FacebookIncomi
                 )
                 if entry.id and nats_subject:
                     nats_msg = await facebook_create_nats_chat_message(entry.id, messaging, 'facebook')
-                    # _res = await nats_dev_client.publish(
-                    #     nats_subject,
-                    #     nats_msg.encode()
-                    # )
 
                     _res = await stream_client_manager.publish_nats_all_clients(
                         nats_subject,

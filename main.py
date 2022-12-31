@@ -16,12 +16,9 @@ debug_logger = logging.getLogger(constants.DEBUG_LOGGER_NAME)
 @app.post('/receiver')
 async def on_incoming_message(
     request: Request
-    # incoming_message: IncomingMessage
 ):
     body = await request.body()
     debug_logger.info(f'facebook get request {body=}')
-    # print(f'request body {body}')
-
     await handle_incoming_chat_message(body)
     return Response(status_code=200, content='EVENT RECEIVED')
 
