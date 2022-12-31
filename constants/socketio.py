@@ -1,0 +1,10 @@
+
+
+
+# socketio event:
+
+SIO_EVENT_NEW_MSG_CUSTOMER_TO_SALEMAN = 'Customer.To.SaleMan'
+SIO_EVENT_ACK_MSG_CUSTOMER_TO_SALEMAN = 'Customer.To.SaleMan.ACK'
+
+SIO_EVENT_NEW_MSG_SALEMAN_TO_CUSTOMER = 'SaleMan.To.Customer'
+SIO_EVENT_NEW_MSG_SALEMAN_TO_CUSTOMER = 'SaleMan.To.Customer.ACK'
